@@ -9,7 +9,7 @@ int main()
     
     scanf("%99s",buff);
     
-    if(strlen(buff) > 8)
+    if(strlen(buff) >= 8)
     {
         printf("文字数が8文字以上\n");
         for(i = 0 ; i < 100 ; i++ )

@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    srand(time(0));
+    int a = (rand() % 100) + 1;
+    int b ,c ,i = 1,s = 1;
+    
+    
+    while(i == 1)
+    {
+        printf("数字を1～100の中で予想し、数字を当ててください\n");
+        scanf("%d",&b);
+        c = b - a ;
+        
+        if(c > 0 )
+        {
+            printf("数字が高いです\n");
+            
+        }
+        else if(c < 0)
+        {
+            printf("数字が低いです\n");
+        }
+        
+        else
+        {
+            printf("正解です\n");
+            break;
+        }
+        s++;
+        if(s==10)
+        {
+            printf("GAME OVER\n");
+            break;
+        }
+    }
+
+    return 0;
+}

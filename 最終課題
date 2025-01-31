@@ -19,7 +19,6 @@ int main()
         if(c > 0 )
         {
             printf("数字が高いです\n");
-            
         }
         else if(c < 0)
         {

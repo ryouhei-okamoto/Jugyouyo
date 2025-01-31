@@ -4,16 +4,17 @@
 
 int main()
 {
-    srand(time(0));
-    int a = (rand() % 100) + 1;
-    int b ,c ,i = 1,s = 1;
+    srand(time(0)); 
+    int a = (rand() % 100) + 1;//数字を１～１００でランダムに生成
+    int b ,c ,i = 1,s = 0;
     
     
-    while(i == 1)
+    while(i == 1)//繰り返し
     {
         printf("数字を1～100の中で予想し、数字を当ててください\n");
         scanf("%d",&b);
-        c = b - a ;
+        
+        c = b - a ;//ランダム生成された数字との差をとる。
         
         if(c > 0 )
         {
@@ -30,8 +31,8 @@ int main()
             printf("正解です\n");
             break;
         }
-        s++;
-        if(s==10)
+        s++;//ｓの値を１ずつ増やす
+        if(s==10)//if文達成で強制終了
         {
             printf("GAME OVER\n");
             break;
